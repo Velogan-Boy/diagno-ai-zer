@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="static/main.css" />
+      <title>Diagno-AI-zer</title>
+   </head>
+   <body>
+        <div class="position-fixed top-0 start-0 m-3">
+                  <a href="/" class="btn btn-primary">Go back</a>
+               </div>
+      <div class="container">
+       
+         <div class="row">
+            <div class="col-md-6 mx-auto">
+               <h1>You may have <span class="text-danger">{{prediction[0][0]}}</span></h1>
+               <p>Here are some of the possible diseases that you may have:</p>
+               <ul class="list-group">
+                  {% for disease in prediction: %}
+                  <li class="list-group-item">{{disease[0]}}</li>
+                  {% endfor %}
+               </ul>
+               <br />
+               <p>You need to follow this immediately:</p>
+               <ul class="list-group">
+                  {% for prec in precaution[prediction[0][0]]: %}
+                  <li class="list-group-item">{{prec}}</li>
+                  {% endfor %}
+               </ul>
+               
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

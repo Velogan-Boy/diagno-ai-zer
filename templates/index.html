@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="static/main.css" />
+      <title>Diagno-AI-zer</title>
+   </head>
+
+   <body>
+      <h1>Diagno-AI-zer</h1>
+
+      <p>Enter the symptoms that you have been experiencing lately and click on submit to get the prediction.</p>
+
+      <form action="/predict" method="post">
+         <label for="exampleDataList" class="form-label">Symptom 1</label>
+         <input class="form-control" name="symptom1" placeholder="Type to search symptoms..." list="symptoms" />
+         <datalist id="symptoms">
+            {% for symptom in symptoms: %}
+            <option value="{{symptom}}">{{symptom}}</option>
+            {% endfor %}
+         </datalist>
+         <label for="exampleDataList" class="form-label">Symptom 2</label>
+         <input class="form-control" name="symptom2" placeholder="Type to search symptoms..." list="symptoms" />
+         <datalist id="symptoms">
+            {% for symptom in symptoms: %}
+            <option value="{{symptom}}">{{symptom}}</option>
+            {% endfor %}
+         </datalist>
+         <label for="exampleDataList" class="form-label">Symptom 3</label>
+         <input class="form-control" name="symptom3" placeholder="Type to search symptoms..." list="symptoms" />
+         <datalist id="symptoms">
+            {% for symptom in symptoms: %}
+            <option value="{{symptom}}">{{symptom}}</option>
+            {% endfor %}
+         </datalist>
+         <label for="exampleDataList" class="form-label">Symptom 4</label>
+         <input class="form-control" name="symptom4" placeholder="Type to search symptoms..." list="symptoms" />
+         <datalist id="symptoms">
+            {% for symptom in symptoms: %}
+            <option value="{{symptom}}">{{symptom}}</option>
+            {% endfor %}
+         </datalist>
+         <label for="exampleDataList" class="form-label">Symptom 5</label>
+         <input class="form-control" name="symptom5" placeholder="Type to search symptoms..." list="symptoms" />
+         <datalist id="symptoms">
+            {% for symptom in symptoms: %}
+            <option value="{{symptom}}">{{symptom}}</option>
+            {% endfor %}
+         </datalist>
+
+         <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+   </body>
+</html>
