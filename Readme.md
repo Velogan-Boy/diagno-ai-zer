@@ -1,4 +1,4 @@
-# Disease Prediction using Machine Learning
+# Disease Prediction using Machine Learning (Diagn-AI-zer)
 
 This project aims to predict diseases based on symptoms using different machine learning algorithms, namely Decision Tree, Random Forest, K Nearest Neighbours, and Naïve Bayes Algorithm. The dataset used for this project is an open-source one hosted in Kaggle Data Repository, containing information on 4962 patients and 42 different diseases. 
 
